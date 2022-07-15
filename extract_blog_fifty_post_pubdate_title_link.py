@@ -89,7 +89,7 @@ def reset_pub_date(input_pub_date_type):  # Thu, 13 Jan 2022 23:41:00 +0900
     res_year = str(split_date[3])  # 년; year
     res_month = str(split_date[2])  # 월; month
     res_day = str(split_date[1])  # 일; day
-    m_dic = {'Jan': '01', 'Feb': '02', 'Mar': '03', 'Apr': '04', 'May': '05', 'Jun': '06', 'Jul ': '07',
+    m_dic = {'Jan': '01', 'Feb': '02', 'Mar': '03', 'Apr': '04', 'May': '05', 'Jun': '06', 'Jul': '07',
              'Aug': '08', 'Sep': '09', 'Oct': '10', 'Nov': '11', 'Dec': '12'}
 
     for item in m_dic.items():  # 딕셔너리를 통한 숫자로 변경
