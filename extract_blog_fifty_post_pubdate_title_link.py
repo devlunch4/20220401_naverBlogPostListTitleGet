@@ -95,7 +95,8 @@ def reset_pub_date(input_pub_date_type):  # Thu, 13 Jan 2022 23:41:00 +0900
     for item in m_dic.items():  # 딕셔너리를 통한 숫자로 변경
         res_month = res_month.replace(item[0], item[1])
 
-    res_date = res_year + '/' + res_month + '/' + res_day
+    # res_date = res_year + '/' + res_month + '/' + res_day
+    res_date = res_year + '-' + res_month + '-' + res_day
     return res_date
 
 
@@ -112,6 +113,9 @@ def main(input_account_name):
         for date, title, site in zip(pub_date_list, title_list, site_list):
             print(reset_pub_date(date.getText()) + '\t' + title.getText() + '\t' + site.getText())
             new_list.append(reset_pub_date(date.getText()) + '\t' + title.getText() + '\t' + site.getText())
+
+            # logger(reset_pub_date(date.getText()) + '\t' + title.getText() + '\t' + site.getText())
+            # new_list.append(reset_pub_date(date.getText()) + '\t' + title.getText() + '\t' + site.getText())
             # print(reset_pub_date(date.getText()))
             # print(title.getText())
             # print(site.getText())
